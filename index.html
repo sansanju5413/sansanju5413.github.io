@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,6 +58,11 @@ color:white;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#4cc9f0;
 }
 
 .container{
@@ -92,6 +98,7 @@ border:none;
 color:white;
 cursor:pointer;
 border-radius:8px;
+font-weight:bold;
 }
 
 .project-grid{
@@ -104,6 +111,12 @@ gap:20px;
 background:#1c2541;
 padding:15px;
 border-radius:12px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(76,201,240,.5);
 }
 
 .project-card img{
@@ -122,6 +135,11 @@ color:#4cc9f0;
 text-decoration:none;
 }
 
+progress{
+height:20px;
+margin-bottom:15px;
+}
+
 footer{
 text-align:center;
 padding:30px;
@@ -135,7 +153,7 @@ margin-top:40px;
 
 <header>
 
-<img src="profile.jpg" class="profile">
+<img src="profile.jpg" class="profile" alt="Sanju H S">
 
 <h1>SANJU H S</h1>
 
@@ -159,7 +177,7 @@ SQL • Excel • Tableau • Power BI • Python
 <h2 class="section-title">About Me</h2>
 
 <div class="card">
-Aspiring Data Analyst with hands-on experience in SQL, Excel, Tableau and Power BI. Skilled in data cleaning, exploratory data analysis, dashboard development and business insights generation.
+Aspiring Data Analyst with hands-on experience in SQL, Excel, Tableau, Power BI and Python. Skilled in data cleaning, exploratory data analysis, dashboard development and generating business insights from data.
 </div>
 </section>
 
@@ -167,17 +185,74 @@ Aspiring Data Analyst with hands-on experience in SQL, Excel, Tableau and Power 
 <h2 class="section-title">Skills</h2>
 
 <div class="card">
-SQL (MySQL) • Excel • Power BI • Tableau • Python • Data Cleaning • EDA • Dashboard Development • Git & GitHub
+
+<p>SQL (MySQL)</p>
+<progress value="90" max="100" style="width:100%"></progress>
+
+<p>Excel</p>
+<progress value="85" max="100" style="width:100%"></progress>
+
+<p>Power BI</p>
+<progress value="80" max="100" style="width:100%"></progress>
+
+<p>Tableau</p>
+<progress value="80" max="100" style="width:100%"></progress>
+
+<p>Python</p>
+<progress value="60" max="100" style="width:100%"></progress>
+
 </div>
 </section>
 
 <section>
+
+<h2 class="section-title">Project Statistics</h2>
+
+<div class="project-grid">
+
+<div class="card">
+<h2>6+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="card">
+<h2>5</h2>
+<p>Dashboards Built</p>
+</div>
+
+<div class="card">
+<h2>5</h2>
+<p>Technologies Used</p>
+</div>
+
+<div class="card">
+<h2>1</h2>
+<p>Internship Completed</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
 <h2 class="section-title">Projects</h2>
+
+<div class="tabs">
+
+<button class="tab-btn">All</button>
+<button class="tab-btn">SQL</button>
+<button class="tab-btn">Excel</button>
+<button class="tab-btn">Power BI</button>
+<button class="tab-btn">Tableau</button>
+<button class="tab-btn">Python</button>
+
+</div>
 
 <div class="project-grid">
 
 <div class="project-card">
-<img src="images/bike-sales.png">
+<img src="images/bike-sales.png" alt="Bike Sales Dashboard">
 <h3>Bike Sales Dashboard (Excel)</h3>
 <p>Interactive Excel dashboard analyzing bike sales trends.</p>
 <a href="https://github.com/sansanju5413/EXCEL--Projects/tree/main/Bike_Sales" target="_blank">
@@ -186,7 +261,7 @@ View Project
 </div>
 
 <div class="project-card">
-<img src="images/device-sales.png">
+<img src="images/device-sales.png" alt="Device Sales Dashboard">
 <h3>Device Sales Dashboard (Excel)</h3>
 <p>Sales performance analysis dashboard using Excel.</p>
 <a href="https://github.com/sansanju5413/EXCEL--Projects/tree/main/Device_Sales" target="_blank">
@@ -195,7 +270,7 @@ View Project
 </div>
 
 <div class="project-card">
-<img src="images/survey-dashboard.png">
+<img src="images/survey-dashboard.png" alt="Power BI Survey Dashboard">
 <h3>Data Professional Survey (Power BI)</h3>
 <p>Analysis of data professional survey responses.</p>
 <a href="https://github.com/sansanju5413/PowerBI-Projects/tree/main/Data_Professional_survey_takers_project" target="_blank">
@@ -204,16 +279,16 @@ View Project
 </div>
 
 <div class="project-card">
-<img src="images/hotel-powerbi.png">
+<img src="images/hotel-powerbi.png" alt="Hotel Booking Power BI">
 <h3>Hotel Booking Dashboard (Power BI)</h3>
-<p>Booking trends, revenue analysis and KPIs.</p>
+<p>Booking trends, revenue analysis and KPI tracking.</p>
 <a href="https://github.com/sansanju5413/PowerBI-Projects/tree/main/Hotel-Booking-PowerBI" target="_blank">
 View Project
 </a>
 </div>
 
 <div class="project-card">
-<img src="images/hotel-tableau.png">
+<img src="images/hotel-tableau.png" alt="Hotel Booking Tableau">
 <h3>Hotel Booking Dashboard (Tableau)</h3>
 <p>Interactive Tableau dashboard with booking insights.</p>
 <a href="https://github.com/sansanju5413/Tableau-Projects/tree/main/Hotel%20Booking" target="_blank">
@@ -223,39 +298,91 @@ View Project
 
 <div class="project-card">
 <h3>Global Layoffs Analysis (SQL)</h3>
-<p>Data cleaning and exploratory analysis using SQL.</p>
+<p>Data cleaning, transformation and exploratory analysis using SQL.</p>
 <a href="https://github.com/sansanju5413/SQL-Projects/tree/main/World_Layoff_Analysis" target="_blank">
 View Project
 </a>
 </div>
 
+<div class="project-card">
+<h3>Python Data Analysis Projects</h3>
+<p>Coming Soon...</p>
+<p>Learning Pandas, NumPy and Data Analytics.</p>
 </div>
+
+</div>
+
 </section>
 
 <section>
+
 <h2 class="section-title">Internship</h2>
 
 <div class="card">
+
 <h3>AI/ML Intern - VisionAstraa EV Academy</h3>
 
 <p>Feb 2026 - May 2026</p>
 
+<br>
+
 <p>
 Completed AI/ML for Electric Vehicles Internship and applied machine learning concepts in a hands-on project environment.
 </p>
+
 </div>
+
 </section>
 
 <section>
+
 <h2 class="section-title">Certifications</h2>
 
 <div class="card">
+
 <ul>
 <li>AI/ML for Electric Vehicles Internship Certificate</li>
 <li>Cybersecurity Analyst Job Simulation (Forage)</li>
 <li>Data Analytics Job Simulation (Deloitte Forage)</li>
 </ul>
+
 </div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p><b>Email:</b> sanjusanju5413@gmail.com</p>
+<br>
+
+<p><b>Phone:</b> +91 8123471963</p>
+<br>
+
+<p><b>Location:</b> Hassan, Karnataka, India</p>
+<br>
+
+<p>
+<b>LinkedIn:</b>
+<a href="https://www.linkedin.com/in/sanju-h-s/" target="_blank">
+Visit Profile
+</a>
+</p>
+
+<br>
+
+<p>
+<b>GitHub:</b>
+<a href="https://github.com/sansanju5413" target="_blank">
+Visit GitHub
+</a>
+</p>
+
+</div>
+
 </section>
 
 </div>
@@ -266,3 +393,4 @@ Completed AI/ML for Electric Vehicles Internship and applied machine learning co
 
 </body>
 </html>
+```
