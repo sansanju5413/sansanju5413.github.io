@@ -1,55 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sanju H S | Data Analyst Portfolio</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#0f172a;
-    color:white;
+background:#0b132b;
+color:white;
 }
 
 header{
-    text-align:center;
-    padding:60px;
-    background:#1e293b;
+text-align:center;
+padding:60px 20px;
+background:#1c2541;
+}
+
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #3a86ff;
 }
 
 h1{
-    font-size:48px;
-    margin:0;
+margin-top:20px;
+font-size:48px;
 }
 
 .subtitle{
-    color:#38bdf8;
-    font-size:22px;
+font-size:24px;
+color:#4cc9f0;
+margin-top:10px;
 }
 
-section{
-    padding:40px 80px;
-}
-
-.card{
-    background:#1e293b;
-    padding:20px;
-    margin:20px 0;
-    border-radius:10px;
-}
-
-a{
-    color:#38bdf8;
-    text-decoration:none;
+.skills-top{
+margin-top:15px;
+font-size:18px;
 }
 
 .btn{
-    display:inline-block;
-    padding:12px 20px;
-    background:#38bdf8;
-    color:black;
-    border-radius:8px;
-    font-weight:bold;
+display:inline-block;
+margin:15px 10px;
+padding:12px 25px;
+background:#3a86ff;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.container{
+width:90%;
+margin:auto;
+padding:40px 0;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:20px;
+color:#4cc9f0;
+}
+
+.card{
+background:#1c2541;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.tabs{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:30px;
+}
+
+.tab-btn{
+padding:10px 20px;
+background:#3a86ff;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:8px;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:20px;
+}
+
+.project-card{
+background:#1c2541;
+padding:15px;
+border-radius:12px;
+}
+
+.project-card img{
+width:100%;
+border-radius:10px;
+}
+
+.project-card h3{
+margin:15px 0;
+}
+
+.project-card a{
+display:inline-block;
+margin-top:10px;
+color:#4cc9f0;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#1c2541;
+margin-top:40px;
 }
 </style>
 </head>
@@ -57,70 +134,135 @@ a{
 <body>
 
 <header>
+
+<img src="profile.jpg" class="profile">
+
 <h1>SANJU H S</h1>
+
 <p class="subtitle">Aspiring Data Analyst</p>
 
-<p>
+<p class="skills-top">
 SQL • Excel • Tableau • Power BI • Python
 </p>
 
-<a class="btn" href="https://github.com/sansanju5413">
-GitHub
-</a>
+<a href="resume.pdf" class="btn" target="_blank">Resume</a>
+
+<a href="https://github.com/sansanju5413" class="btn" target="_blank">GitHub</a>
+
+<a href="https://www.linkedin.com/in/sanju-h-s/" class="btn" target="_blank">LinkedIn</a>
+
 </header>
 
+<div class="container">
+
 <section>
-<h2>About Me</h2>
+<h2 class="section-title">About Me</h2>
 
 <div class="card">
-Aspiring Data Analyst with hands-on experience in SQL, Excel,
-Tableau and Power BI. Skilled in data cleaning, exploratory
-data analysis, dashboard development and business insights.
+Aspiring Data Analyst with hands-on experience in SQL, Excel, Tableau and Power BI. Skilled in data cleaning, exploratory data analysis, dashboard development and business insights generation.
 </div>
-
-<h2>Skills</h2>
-
-<div class="card">
-SQL | Excel | Tableau | Power BI | Python |
-Data Cleaning | EDA | Dashboard Development
-</div>
-
-<h2>Projects</h2>
-
-<div class="card">
-<h3>Global Layoffs Data Cleaning & Analysis</h3>
-<p>
-Cleaned and analyzed global layoffs dataset using SQL.
-Performed duplicate removal, null handling, standardization,
-and exploratory analysis.
-</p>
-</div>
-
-<div class="card">
-<h3>Hotel Booking Analytics</h3>
-<p>
-Analyzed 17K+ hotel booking records using SQL and Tableau.
-Created interactive dashboards to visualize booking trends,
-cancellations and customer behavior.
-</p>
-</div>
-
-<div class="card">
-<h3>Data Professional Survey Dashboard</h3>
-<p>
-Built Power BI dashboard analyzing salaries, favorite
-programming languages and work-life balance.
-</p>
-</div>
-
-<h2>Contact</h2>
-
-<div class="card">
-Email: sanjusanju5413@gmail.com <br><br>
-LinkedIn: linkedin.com/in/sanju-h-s
-</div>
-
 </section>
+
+<section>
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+SQL (MySQL) • Excel • Power BI • Tableau • Python • Data Cleaning • EDA • Dashboard Development • Git & GitHub
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<img src="images/bike-sales.png">
+<h3>Bike Sales Dashboard (Excel)</h3>
+<p>Interactive Excel dashboard analyzing bike sales trends.</p>
+<a href="https://github.com/sansanju5413/EXCEL--Projects/tree/main/Bike_Sales" target="_blank">
+View Project
+</a>
+</div>
+
+<div class="project-card">
+<img src="images/device-sales.png">
+<h3>Device Sales Dashboard (Excel)</h3>
+<p>Sales performance analysis dashboard using Excel.</p>
+<a href="https://github.com/sansanju5413/EXCEL--Projects/tree/main/Device_Sales" target="_blank">
+View Project
+</a>
+</div>
+
+<div class="project-card">
+<img src="images/survey-dashboard.png">
+<h3>Data Professional Survey (Power BI)</h3>
+<p>Analysis of data professional survey responses.</p>
+<a href="https://github.com/sansanju5413/PowerBI-Projects/tree/main/Data_Professional_survey_takers_project" target="_blank">
+View Project
+</a>
+</div>
+
+<div class="project-card">
+<img src="images/hotel-powerbi.png">
+<h3>Hotel Booking Dashboard (Power BI)</h3>
+<p>Booking trends, revenue analysis and KPIs.</p>
+<a href="https://github.com/sansanju5413/PowerBI-Projects/tree/main/Hotel-Booking-PowerBI" target="_blank">
+View Project
+</a>
+</div>
+
+<div class="project-card">
+<img src="images/hotel-tableau.png">
+<h3>Hotel Booking Dashboard (Tableau)</h3>
+<p>Interactive Tableau dashboard with booking insights.</p>
+<a href="https://github.com/sansanju5413/Tableau-Projects/tree/main/Hotel%20Booking" target="_blank">
+View Project
+</a>
+</div>
+
+<div class="project-card">
+<h3>Global Layoffs Analysis (SQL)</h3>
+<p>Data cleaning and exploratory analysis using SQL.</p>
+<a href="https://github.com/sansanju5413/SQL-Projects/tree/main/World_Layoff_Analysis" target="_blank">
+View Project
+</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Internship</h2>
+
+<div class="card">
+<h3>AI/ML Intern - VisionAstraa EV Academy</h3>
+
+<p>Feb 2026 - May 2026</p>
+
+<p>
+Completed AI/ML for Electric Vehicles Internship and applied machine learning concepts in a hands-on project environment.
+</p>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Certifications</h2>
+
+<div class="card">
+<ul>
+<li>AI/ML for Electric Vehicles Internship Certificate</li>
+<li>Cybersecurity Analyst Job Simulation (Forage)</li>
+<li>Data Analytics Job Simulation (Deloitte Forage)</li>
+</ul>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 Sanju H S | Data Analyst Portfolio
+</footer>
 
 </body>
 </html>
